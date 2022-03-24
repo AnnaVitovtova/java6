@@ -48,7 +48,7 @@ class StatsServiceTest {
     @Test
     void shouldCalculateMinMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
         int actual = service.minSales(sales);
         assertEquals(expected, actual);
@@ -58,7 +58,7 @@ class StatsServiceTest {
     @Test
     void shouldCalculateMaxMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 8;
         int actual = service.maxSales(sales);
         assertEquals(expected, actual);

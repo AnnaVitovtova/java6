@@ -33,7 +33,7 @@ public class StatsService {
         return currentMax;
     }
 
-    public int minSales(int[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
         int month = 0;
         for (long sale : sales) {
@@ -46,7 +46,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int maxSales(int[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
         int month = 0;
         for (long sale : sales) {
