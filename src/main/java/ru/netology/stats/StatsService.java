@@ -33,30 +33,30 @@ public class StatsService {
         return currentMax;
     }
 
-    public int minSales(long[] sales) {
-        int minMonth = 0;
-        int month = 0;
-        for (long sale : sales) {
+    public int minSales(int[] sales) {
+int avg = this.calcAvg(sales);
 
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+        int sumMinMonth = 0;
+        for (int sale : sales) {
+            if (sale < avg) {
+                sumMinMonth =sumMinMonth+1;
             }
-            month = month + 1;
+
         }
-        return minMonth + 1;
+        return sumMinMonth;
     }
+    public int maxSales(int[] sales) {
+        int avg = this.calcAvg(sales);
 
-    public int maxSales(long[] sales) {
-        int maxMonth = 0;
-        int month = 0;
-        for (long sale : sales) {
-
-            if (sale >= sales[maxMonth]) {
-                maxMonth = month;
+        int sumMaxMonth = 0;
+        for (int sale : sales) {
+            if (sale > avg) {
+                sumMaxMonth =sumMaxMonth+1;
             }
-            month = month + 1;
+
         }
-        return maxMonth + 1;
+        return sumMaxMonth;
     }
 }
+
 
