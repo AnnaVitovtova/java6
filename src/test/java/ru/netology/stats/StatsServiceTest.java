@@ -46,22 +46,43 @@ class StatsServiceTest {
     }
 
     @Test
-    void shouldCalculateMinMonth() {
+    void shouldCalculateMinSale() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 9;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
         int actual = service.minSales(sales);
         assertEquals(expected, actual);
 
     }
 
     @Test
-    void shouldCalculateMaxMonth() {
+    void shouldCalculateMaxSale() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 8;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
         int actual = service.maxSales(sales);
         assertEquals(expected, actual);
 
     }
+
+    @Test
+    void shouldMinNumberSale() {
+        StatsService service = new StatsService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 9;
+        int actual = service.minNumberSales(sales);
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void shouldMaxNumberSale() {
+        StatsService service = new StatsService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 8;
+        int actual = service.maxNumberSales(sales);
+        assertEquals(expected, actual);
+
+    }
 }
+
