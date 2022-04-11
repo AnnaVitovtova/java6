@@ -54,7 +54,6 @@ class StatsServiceTest {
         assertEquals(expected, actual);
 
     }
-
     @Test
     void shouldCalculateMaxSale() {
         StatsService service = new StatsService();
